@@ -1,6 +1,6 @@
 node {    
       stage('SCM Checkout') {
-             git 'https://github.com/francis0516/hello-world-war'
+             git 'https://github.com/bjeruorobo/hello-world-war'
       }   
       stage('Build') {     
              // Get Maven Home Path
@@ -15,6 +15,6 @@ node {
       }
       stage('Deploy war file'){
              def mvnHome = tool name: 'Maven 3', type: 'maven'
-             sh "scp /var/lib/jenkins/workspace/VerizonApp/target/hello-world-war-1.0.0.war root@192.168.1.13:/opt/apache-tomcat-9.0.17/webapps"
+             sh "scp /var/lib/jenkins/workspace/TomcatApp_Pipeline/target/hello-world-war-1.0.0.war root@192.168.1.21:/opt/apache-tomcat-9.0.19/webapps"
       }
 }
