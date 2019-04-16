@@ -1,6 +1,6 @@
 node {    
       stage('SCM Checkout') {
-             git 'https://github.com/bjeruorobo/hello-world-war'
+             git 'https://github.com/bjesuorobo/hello-world-war'
       }   
       stage('Build') {     
              // Get Maven Home Path
